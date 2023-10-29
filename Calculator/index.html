@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<div class="calculator">
+		<input type="text" id="input" >
+		<div class="btn-container">
+			<button onclick=" val='';
+			document.getElementById('input').value=val " >C</button>
+			
+			<button onclick="val=val+'1';
+			document.getElementById('input').value=val">1</button>
+
+			<button onclick="val=val+'2'; 
+			document.getElementById('input').value=val">2</button>
+
+			<button onclick="val=val+'+';
+			document.getElementById('input').value=val">+</button>
+
+			<button onclick="val=val+'3';
+			document.getElementById('input').value=val">3</button>
+
+			<button onclick="val=val+'4'; 
+			document.getElementById('input').value=val">4</button>
+
+			<button onclick="val=val+'-'; 
+			document.getElementById('input').value=val">-</button>
+
+			<button onclick="val=val+'5';
+			document.getElementById('input').value=val">5</button>
+
+			<button onclick="val=val+'6'; 
+			document.getElementById('input').value=val">6</button>
+
+			<button onclick="val=val+'*'; 
+			document.getElementById('input').value=val">*</button>
+
+			<button onclick="val=val+'7'; 
+			document.getElementById('input').value=val">7</button>
+
+			<button onclick="val=val+'8'; 
+			document.getElementById('input').value=val">8</button>
+
+			<button onclick="val=val+'/'; 
+			document.getElementById('input').value=val">/</button>
+
+			<button onclick="val=val+'9'; 
+			document.getElementById('input').value=val">9</button>
+
+			<button onclick="val=val+'0'; 
+			document.getElementById('input').value=val">0</button>
+
+			<button id="delete" onclick="val=val.substring(0, val.length - 1); 
+			document.getElementById('input').value=val">Delete</button>
+
+			<button onclick="calculate()">=</button>	
+		</div>
+	</div>
+
+<!-- java script -->
+<script>
+	let val=document.getElementById("input").value;
+	// document.getElementById("input").val=value;
+
+	function calculate(){
+		document.getElementById("input").value=eval(val);
+	}
+</script>
+
+</body>
+</html>
